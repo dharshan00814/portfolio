@@ -3207,3 +3207,161 @@ body.cyber-shot .nav-container {
     }
 }
 
+/* --- Matrix Canvas & Neon Enhancements --- */
+#matrixCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+/* Neon Green/Blue text & element glows */
+body.cyber-shot {
+    background: #000;
+}
+
+body.cyber-shot h1, 
+body.cyber-shot h2, 
+body.cyber-shot h3, 
+body.cyber-shot .brand {
+    color: #0f0;
+    text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0;
+}
+
+body.cyber-shot .hero-description, 
+body.cyber-shot p, 
+body.cyber-shot .hero-role {
+    color: #00ffcc;
+    text-shadow: 0 0 5px rgba(0, 255, 204, 0.5);
+}
+
+body.cyber-shot .btn-primary {
+    background: transparent;
+    color: #0f0;
+    border: 1px solid #0f0;
+    box-shadow: 0 0 10px #0f0, inset 0 0 10px #0f0;
+    transition: all 0.3s ease;
+}
+
+body.cyber-shot .btn-primary:hover {
+    background: #0f0;
+    color: #000;
+    box-shadow: 0 0 20px #0f0, inset 0 0 20px #0f0;
+}
+
+body.cyber-shot .btn-secondary {
+    background: transparent;
+    color: #00ffcc;
+    border: 1px solid #00ffcc;
+    box-shadow: 0 0 10px #00ffcc, inset 0 0 10px #00ffcc;
+    transition: all 0.3s ease;
+}
+
+body.cyber-shot .btn-secondary:hover {
+    background: #00ffcc;
+    color: #000;
+    box-shadow: 0 0 20px #00ffcc, inset 0 0 20px #00ffcc;
+}
+
+body.cyber-shot .card,
+body.cyber-shot .mini-card,
+body.cyber-shot .contact-panel {
+    background: rgba(0, 10, 0, 0.8);
+    border: 1px solid #0f0;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+}
+
+body.cyber-shot .card:hover,
+body.cyber-shot .mini-card:hover,
+body.cyber-shot .contact-panel:hover {
+    border-color: #0f0;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+}
+
+body.cyber-shot .social-row a {
+    color: #0f0;
+    border-color: #0f0;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+}
+
+body.cyber-shot .social-row a:hover {
+    background: #0f0;
+    color: #000;
+    box-shadow: 0 0 20px #0f0;
+}
+
+/* Form inputs */
+body.cyber-shot .contact-form input,
+body.cyber-shot .contact-form textarea {
+    background: rgba(0, 20, 0, 0.6);
+    border-color: #0f0;
+    color: #0f0;
+}
+
+body.cyber-shot .contact-form input:focus,
+body.cyber-shot .contact-form textarea:focus {
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+}
+
+/* Nav */
+body.cyber-shot .nav-link {
+    color: #00ffcc;
+}
+
+body.cyber-shot .nav-link:hover,
+body.cyber-shot .nav-link.active {
+    color: #0f0;
+    text-shadow: 0 0 10px #0f0;
+    border-color: #0f0;
+}
+
+body.cyber-shot .hero-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+body.cyber-shot .hero-description {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body.cyber-shot .hero h1 {
+    text-align: center;
+    width: 100%;
+}
+
+body.cyber-shot .hero-actions,
+body.cyber-shot .social-row {
+    justify-content: center;
+    width: 100%;
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+    body.cyber-shot h1 {
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
+    body.cyber-shot .hero-grid {
+        padding: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+    body.cyber-shot .hero-copy {
+        width: 100%;
+    }
+    body.cyber-shot .hero-visual {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -702,3 +702,51 @@ document.addEventListener('DOMContentLoaded', () => {
     // Keep decorative animation lightweight for smoother scrolling/input.
 });
 
+
+
+// Matrix Canvas Animation
+const canvas = document.getElementById('matrixCanvas');
+if (canvas && enableAdvancedEffects) {
+    const ctx = canvas.getContext('2d');
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+
+    let columns = Math.floor(width / 20);
+    let drops = [];
+    for (let i = 0; i < columns; i++) {
+        drops[i] = 1;
+    }
+
+    const matrixChars = '01ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()_+-=~';
+    const charArray = matrixChars.split('');
+
+    function drawMatrix() {
+        ctx.fillStyle = 'rgba(0, 5, 0, 0.05)';
+        ctx.fillRect(0, 0, width, height);
+        
+        ctx.fillStyle = '#0f0'; // bright green neon
+        ctx.font = '15pt monospace';
+        
+        for (let i = 0; i < drops.length; i++) {
+            const text = charArray[Math.floor(Math.random() * charArray.length)];
+            ctx.fillText(text, i * 20, drops[i] * 20);
+            
+            if (drops[i] * 20 > height && Math.random() > 0.975) {
+                drops[i] = 0;
+            }
+            drops[i]++;
+        }
+    }
+
+    setInterval(drawMatrix, 50);
+
+    window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+        columns = Math.floor(width / 20);
+        drops = [];
+        for (let i = 0; i < columns; i++) {
+            drops[i] = 1;
+        }
+    });
+}
